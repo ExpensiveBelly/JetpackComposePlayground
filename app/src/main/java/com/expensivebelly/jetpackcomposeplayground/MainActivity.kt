@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.expensivebelly.jetpackcomposeplayground.pulltorefresh.PullToRefreshScreenExample
 import com.expensivebelly.jetpackcomposeplayground.ui.theme.JetpackComposePlaygroundTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +21,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposePlaygroundTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+//                    HorizontalPagerTabLayout(Modifier.padding(innerPadding))
+                    PullToRefreshScreenExample(Modifier.padding(innerPadding))
                 }
             }
         }
